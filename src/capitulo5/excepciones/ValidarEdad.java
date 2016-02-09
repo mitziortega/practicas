@@ -5,16 +5,12 @@
  */
 package capitulo5.excepciones;
 
-import capitulo4.herencia2.ValorNegativoException;
-
 /**
  *
- * @author root
+ * @author T-101
  */
 public class ValidarEdad {
-    
-    public static void validadEdada(int edad)throws Exception{
-        if(edad<0)throw new ValorNegativoException();
+    public void checarEdadNegativa(int edad)throws ValorNoNegativoException{
+       if(edad<0)throw new ValorNoNegativoException();
     }
-    
 }

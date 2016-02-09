@@ -7,10 +7,11 @@ package capitulo5.excepciones;
 
 /**
  *
- * @author campitos
+ * @author T-101
  */
-public class ValorNoNegativoException extends Exception {
+public class ValorNoNegativoException extends Exception{
+    
     public ValorNoNegativoException(){
-        super("No puedes eter valores negativos");
+        super("No puedes meter un valor negativo");
     }
 }
