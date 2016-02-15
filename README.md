@@ -79,3 +79,7 @@ De esta clase se heredan las clases Exception  y Error. El método más importan
 4. Generar otra clase que se llame ValorMenorDeEdadException, como en el punto 2 implementar el mismo constructor. VALOR 2 PUNTOS.
 5. Crear una interfaz de usuario con dos campos de texto, uno para cada valor del cliente. Agregar un boton que al orpimirlo valide el valor ingresado en la caja de texto de la edad. VALOR 2 PUNTOS.
 
+##Practica No. 4 
+Esta practica consta de varias partes, pues cmprende la realziacion del prpyecto final, en esta primera parte vamos a aprender a usar el paquete java.io y java.net para conectarnos a una pagina web estatica.
+
+1. Crear un paquete que se llame 
