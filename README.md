@@ -82,4 +82,26 @@ De esta clase se heredan las clases Exception  y Error. El método más importan
 ##Practica No. 4 
 Esta practica consta de varias partes, pues cmprende la realziacion del prpyecto final, en esta primera parte vamos a aprender a usar el paquete java.io y java.net para conectarnos a una pagina web estatica.
 
-1. Crear un paquete que se llame 
+1. Crear un paquete que se llame capitulo8.inputoutput, en el Crear una clase que se llame MiPrimeraConexion que contenga el método main.      2 PUNTOS.
+2. Introducir el siguiente codigo en el metodo main
+```java
+ String informacion="nada";
+        URL url=new URL("http://www.weatherlink.com/user/sierraguadalupe/index.php?view=summary&headers=0");
+        HttpURLConnection con= (HttpURLConnection) url.openConnection();
+         InputStreamReader in= new InputStreamReader(con.getInputStream());
+        BufferedReader reader=new BufferedReader(in);
+
+
+        StringBuilder builder=new StringBuilder();
+        int ch;
+        int lineas=0;
+        while (reader.readLine()!=null){
+            lineas++;
+        }
+        informacion="Lineas:"+lineas;
+        System.out.println(informacion);
+    }
+ ```
+
+ejecuta el código, y verifica que no lance excepciones. VALOR 2 PUNTOS.
+3. Identifica la linea que contiene la temperatura actual  e imprimela. VALOR 2 PUNTO.
