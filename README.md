@@ -174,3 +174,153 @@ public class Galeria {
 5.  Generar una clase main que se llame MostrarGalerías y en la implementación de método main agregar las galerias de ejercicio anterior. Iterarlas y mostrarlas en linea de comandos. VALOR 2 PUNTOS.
 
 ##Práctica No. 7
+**Objetivo: Usar clases internas anónimas para construir un Thread de fondo y aplciarlo a una interfaz de usuario**
+
+1. Del ejercicio anterior verificar que se tenga implementado el código de GenerarGaleriás siguiente. VALOR 2 PUNTOS
+```java
+ public class GenerarGaleria {
+    public static ArrayList<Galeria> generarGaleria(){
+        ArrayList galeria=new ArrayList<Galeria>();
+        Galeria g1=new Galeria("Subiendo la sierra", "Camino al ascenso por la ladera norte","/proyecto/carrusel/uno.jpg");
+        Galeria g2=new Galeria("Amanecer en la cumbre", "Observanbdo el amanecer en los bosques de cedro","/proyecto/carrusel/dos.jpg");
+            Galeria g6=new Galeria("Vegetacion", "Zona de vegetación densa","/proyecto/carrusel/tres.jpg");
+        Galeria g3=new Galeria("Zona de transición", "Zona de transicion entre vegetacion xerofita y templada a los 2500 msm","/proyecto/carrusel/cuatro.jpg");
+        Galeria g4=new Galeria("Rocas", "Zona rocosa en la parte mas alta de la sierra a mas de 3000 metros","/proyecto/carrusel/cinco.jpg");
+        Galeria g5=new Galeria("Palmeras", "Palmeras en las partes bajas, típicas de clima semi seco","/proyecto/carrusel/seis.jpg");
+       galeria.add(g1);
+       galeria.add(g2);
+       galeria.add(g3);
+       galeria.add(g4);
+       galeria.add(g5);
+       galeria.add(g6);
+        
+        return galeria;
+    }
+}
+```
+2. Crear una clase de tipo JFRame que tenga 3 JLabels, al primero asignarle el nombre de url, al segundo de titulo y al tercero de descripción. VALOR 2 PUNTOS.
+3. Crear una **clase interna anónima** en el constructor de la clase anterior de tipo JFrame, que implemente a la interface **Runnable**. VALOR 2 PUNTOS.
+4. En el interior del metodo **run()** del ejercicio anterior vas a invocar el arreglo de método generarGaleria. VALOR 2 PUNTOS.
+5. Mostrar en las etiquetas respectivas los valores del titulo, la imagen y la descripción de un objeto de tipo Galeria de forma continua. Cada objeto debe mostrarse por 10 segundos, de manera iterativa. VALOR 2 PUNTOS.
+
+##Práctica No. 8 Clases Wrapper
+**Objetivo: Introduccion al paquete input/output y lectura y escritura de archivos en JAVA**
+1. Generar el código de la siguiente clase. VALOR 2 PUTNOS.
+```java
+public class Imc {
+  
+    private float peso;
+    private float estatura;
+    
+    public void setPeso(float peso){
+        this.peso=peso;
+    }
+    
+    public void setEstatura(float estatura){
+        this.estatura=estatura;
+    }
+
+
+    public float calcular(){
+        
+        return peso/(estatura*estatura);
+        
+        
+        
+    }
+           
+    
+}
+```
+
+2. Crear una ventana de tipo JFrame. Agregar las componentes que se muestran en la clase anterior, es decir dos campos de  texto, uno para introducir el peso y otro para introducir la altura. VALOR 2 PUNTOS.
+3. Implementar un boton y agregarle un método para el manejo del click dl evento de boton. Usar una clase interna anónima. VALOR 2 PUNTOS.
+4. En la implementación del método anterior pedirle los valores de peso y altura a los campos de texto anteriores. Usar la clase wrapper **Float** para convertir los valores dados a valores de tipo float. VALOR 2 PUNTOS.
+5. Implementar la lógica de cálculo del imc=peso/(altura*altura) sobre los valores anteriores y aplicarlo a los resultados del los valores ingresados en las etiquetas.VALOR 2 PUNTOS.
+
+
+##Práctica No. 9.  Uso de JAVA **Enums** para generar datos abstractos
+**Objetivo: Aplicar en un caso pŕáctico la creacion de una clase de Enumerados en Java para asignar estados de unsa máquina**
+1. Generar la siguiente clase en JAVA: Maquina.java. VALOR 2 PUNTOS.
+```java
+public class Maquina {
+    private EstadoDeLaMaquina estadoDeLaMaquina;
+
+    public EstadoDeLaMaquina getEstadoDeLaMaquina() {
+        return estadoDeLaMaquina;
+    }
+
+    public void setEstadoDeLaMaquina(EstadoDeLaMaquina estadoDeLaMaquina) {
+        this.estadoDeLaMaquina = estadoDeLaMaquina;
+    }
+    
+}
+
+```
+2. Generar una clase de tipo JFRame que se llame VentanaMaquina y en ella agregar un boton y un Jlabel, hacer las inicializaciones de objeto correspondientes. VALOR 2 PUNTOS.
+3. Generar un enumerado en java, tal como se muestra en el código siguiente. VALOR 2 PUNTOS
+```java
+public enum EstadoDeLaMaquina {
+    OCUPADA, BLOQUEDA, DISPONIBLE
+}
+```
+4.  Implementar la clase TestMaquina como sigue. VALOR 2 PUNTOS.
+public class TestMaquina {
+```java
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Maquina maquina1=new Maquina();
+        
+        maquina1.setEstadoDeLaMaquina(EstadoDeLaMaquina.DISPONIBLE);
+        System.out.println(maquina1.getEstadoDeLaMaquina());
+    }
+    
+}
+```
+
+5. En la ventana de tipo JFrame del ejercicio númeor 3 asignar al manejo de evento de boton una clase interna anónima donde al hacer click se intercambien los estados de la máquina de manera cíclica. VALOR 2 PUNTOS.
+
+
+##Práctica No. 10. Creación y uso de threads
+**Objetivo: En esta práctica se aplicará el uso de thread heredando la clase thread e implementando la interfaz Runnable.
+
+1. Generar el siguiente thread heredando la clase Thread. VALOR 2 PUNTOS.
+```java
+package capitulo6.threads;
+
+/**
+ *
+ * @author campitos
+ */
+public class Facil extends Thread{
+    
+    public void run(){
+        System.out.println("SOY UN THEAD FELIZ");
+    }
+    
+}
+```
+2. Genera el siguiente Thread implementando la interface Runnable. VALOR 2 PUNTOS.
+```java
+package capitulo6.threads;
+
+/**
+ *
+ * @author campitos
+ */
+public class Medio implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("Mas o menos puedo hacer varias cosas");
+    }
+    
+}
+```
+3. Genera una clase main en el interior de método main crear un Thread de ejercicio No. 1 , asignale un nombre a dicho thread, probarlo e imprimir en pantalla su resultado. VALOR 2 PUNTOS
+4. En el mismo método main generar un Thread dl ejercicio no. 2 y asignarle un nombre, imprimir su nombre en pantalla. VALOR 2 PUNTOS.
+5. Generar un ciclo for en el metodo main anterior con un número de iteraciones=10, para las primeras 5 iteraciones invocar al primer thread y para las ultimas 5 invocar el segundo thread. Observar que las salidas no son ordenadas. VALOR 2 PUNTOS.
