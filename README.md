@@ -324,3 +324,71 @@ public class Medio implements Runnable {
 3. Genera una clase main en el interior de método main crear un Thread de ejercicio No. 1 , asignale un nombre a dicho thread, probarlo e imprimir en pantalla su resultado. VALOR 2 PUNTOS
 4. En el mismo método main generar un Thread dl ejercicio no. 2 y asignarle un nombre, imprimir su nombre en pantalla. VALOR 2 PUNTOS.
 5. Generar un ciclo for en el metodo main anterior con un número de iteraciones=10, para las primeras 5 iteraciones invocar al primer thread y para las ultimas 5 invocar el segundo thread. Observar que las salidas no son ordenadas. VALOR 2 PUNTOS.
+
+##Práctica no. 11. Uso de serializados para crear persistencia en aplicaciones JAVA(primera parte)
+**Objetivo: En esta práctica se hará uso de la serialización para crear persistencia.**
+
+1. Generar una clase que se llame Imagen, en ella agregar los siguientes atributos: datoImagen de tipo arreglo de bytes, titulo de tipo String y descripción de tipo String. Agregar el constructor que inicializa los atributos. VALOR 2 PUNTOS.
+2. Por cada uno de los atributos generar un par de método de tipo get y set. VALOR 2 PUNTOS.
+3. Sobre-escribir el método toString() de la clase anterior. VALOR 2 PUNTOS.
+4. Agregar el código necesario para encapsular la clase anterior. VALOR 2 PUNTOS.
+5. Generar en ese mismo proyecto una clase que se llame PersistenciaImagen, que contenga dos métodos de tipo static, el primero se debe llamar guardarImagen y el segundo leerImagen. VALOR 2 PUNTOS.
+
+##Práctica No. 12. Uso de serializados para crear persistencia.(segunda parte: generación del modelo)
+
+1. Verificar que se tenga la clase Imagen como se muestra en el código siguiente. VALOR 2 PUNTOS.
+```java
+package com.campitos.autenticar.maven.java.patos;
+
+import java.io.File;
+import java.io.Serializable;
+
+/**
+ *
+ * @author campitos
+ */
+public class Imagen implements Serializable{
+    
+   private byte[] datosImage;
+   private String  titulo;
+   private String descripcion;
+
+    public Imagen(byte[] datosImage, String titulo, String descripcion) {
+        this.datosImage = datosImage;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+    }
+
+    public Imagen() {
+    }
+
+    public byte[] getDatosImage() {
+        return datosImage;
+    }
+
+    public void setDatosImage(byte[] datosImage) {
+        this.datosImage = datosImage;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+}
+```
+2. Implementar el método para guardar la imagen en un archivo serializado que se llame guardarImagen. VALOR 2 PUNTOS
+3. Implementar el método para leer la imagen, usar el mismo archivo donde se guardo la imagen para leerla a partir  de ese archivo. VALOR 2 PUNTOS.
+4. Generar una clase que se llame MisImagenes, en ella agregar un JFIleChooser y un boton, con el JFileChooser se deberá de poder buscar un archivo de imagen en el sistema de archivos de la PC. VALOR 2 PUNTOS.
+5. Implementar la lógica del manejo de evento de botón para que al hacer click se guarde la imagen que se tenga seleccionada del ejercicio numero 4. VALOR 2 PUNTOS.
