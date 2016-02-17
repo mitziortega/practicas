@@ -105,3 +105,72 @@ Esta practica consta de varias partes, pues cmprende la realziacion del prpyecto
 
 ejecuta el código, y verifica que no lance excepciones. VALOR 2 PUNTOS.
 3. Identifica la linea que contiene la temperatura actual  e imprimela. VALOR 2 PUNTO.
+4. 4. Una vez identificada la linea de temperatura vasa colocar en un arreglo las temepraturas maáximas, minima y horas de máxima y minima. VALOR 2 PUNTOS.
+5. Construir una ventana JFRame y en ella mostrar los valores anteriores en campos de texto. VALOR 2 PUNTOS.
+
+
+##Práctica No. 5.
+**Objetivo: Crear una tarea programada para que en la práctica anterior se refresque la temperatura automáticamente**
+
+1. Crear un Thread como con la técnica de clases interas anónimas dentro de la clase JFRam de ejercicio anterior. VALOR 2 PUNTOS
+2. Una vez creado el Thread vas a implementar el código del método **run()** correspondiente. VALOR 2 PUNTOS
+3. Generar un ciclo while infinito y dentro del él implementar el bloque try/catch correspondiente y poner al dormir el thread pro 1000 milisegundos. VALOR 2 PUNTOS
+4. Dentro del ciclo anterior crear un objeto de la clase **Calendar** y crear instancias de la hora, minuto y segundo. VALOR 2 PUNTOS.
+5. Asignar a las componentes de las etiquetas de la ventana del ejercicio anterior los valores del paso numero 4. VALOR 2 PUNTOS.
+
+
+##Práctica No. 6
+**Objetivo: Introducción a los collections en JAVA**
+En esta práctica se aplicará el uso de los ArrayList genéricos y se aplicará a un caslo pŕactico.
+
+1. Crear la clase siguiente en un nuevo proyecto JAVA. VALOR 2 PUNTOS.
+
+1. 
+```java
+public class Galeria {
+    private String titulo;
+    private String descripcion;
+    private String url;
+
+    public Galeria(String titulo, String descripcion, String url) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    
+    
+    
+}
+
+```
+
+2. Crear una clase que se llame GenerarGalería que contenga un atributo de tipo ArrayList<Galeria>. VALOR 2 PUNTOS
+3. En la clase anterior generar un método de tipo static cuyo tipo de retorno sea una referencia del atributo del punto anterior. VALOR 2 PUNTOS.
+4. En la implementación del método anterior crear un ArrayList de tipo galeria y agregar 5 objetos de tipo Galeria, añadirlos uno a uno al ArrayList . VALOR 2 PUNTOS.
+5.  Generar una clase main que se llame MostrarGalerías y en la implementación de método main agregar las galerias de ejercicio anterior. Iterarlas y mostrarlas en linea de comandos. VALOR 2 PUNTOS.
+
+##Práctica No. 7
